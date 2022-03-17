@@ -10,13 +10,13 @@ interface Props {
   userData: User
 }
 
-const LoggedInPage = ({ userData: { fullName, amountInAccount, transactions } }: Props): JSX.Element => {
+const LoggedInPage = ({ userData: { fullName, balance, transactions } }: Props): JSX.Element => {
   return (
     <>
       <div className='logged-in-page__bottom'>
-        <Card header="Welcome," text={fullName}>
+        <Card header="Welcome" text={fullName}>
         </Card>
-        <Card header={`$ ${amountInAccount}`} text='Current amount in account'>
+        <Card header={`$ ${balance}`} text='Current amount in account'>
         </Card>
       </div>
       <div>

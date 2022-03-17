@@ -22,18 +22,18 @@ export const sendRequest = async (endpoint: string, method: string, bodyParam?: 
 }
 
 export const handleLogout = async () => {
-  localStorage.removeItem('token')
+  localStorage.clear
 
   window.location.href = '/';
 };
 
 export const handleSignUp = async (body: RequestBody) => {
-  await sendRequest('signup', 'POST', body);
+  await sendRequest('sign-up', 'POST', body);
   window.location.href = '/';
 }
 
 export const handleLogin = async (body: RequestBody) => {
-  const result = await sendRequest('login', 'POST', body);
+  const result = await sendRequest('sign-in', 'POST', body);
 
   const { data, token, error } = result;
   localStorage.setItem('token', token)

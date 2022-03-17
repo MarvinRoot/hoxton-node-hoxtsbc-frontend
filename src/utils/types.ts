@@ -13,7 +13,7 @@ export type User = {
   id: number;
   email: string;
   fullName: string;
-  amountInAccount: number;
+  balance: number;
   transactions: Transaction[]
 }
 
